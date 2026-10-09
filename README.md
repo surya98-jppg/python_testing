@@ -1,13 +1,11 @@
-# python_testing
-
-# Convert string of digits into a list of integers
-        digits = [int(char) for char in s]
-
-# greet function
-def greet(x):
-    print(f"hi {x}",end=" ")
-    print("good morning")
-x=input("enter a name")
-greet(x)
-output :
-hi surya good morning
+# classes and objects in java
+class Student {
+    int roll=3; // intialization and declaration
+    String name;
+    
+    public static void main(String[] args) {
+        Student s1=new Student();  // creating object for s1
+        s1.roll=9; // accessing through refernece varaible s1 
+        System.out.println(s1.roll);
+    }
+}
