@@ -9,3 +9,20 @@ class Student {
         System.out.println(s1.roll);
     }
 }
+# parametrized constructor
+class Student {
+    String institute;
+    int enroll;
+    int dob;
+Student(String name,int enroll, int dob){
+    this.institute=institute;
+    this.enroll=enroll;
+    this.dob=dob;
+}
+    public static void main(String[] args) {
+      Student surya=new Student("piet",22,143);
+      Student naresh=new Student("piet",2,2);
+        System.out.println(surya.dob);
+        System.out.println(naresh.dob);
+    }
+}
