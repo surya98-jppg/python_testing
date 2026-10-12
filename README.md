@@ -114,3 +114,37 @@ public static void main(String[]args){
     System.out.println(s1.name);
 }
 }
+# Non-static method cannot access in static method like main
+class Main {
+ void Gretting(){  // non static method cannot be used in static method
+    System.out.print("hi");
+}
+static void hello(){ // these do not have instances
+  Gretting();       // we cannot use this but the function we are using depends on instances .
+}
+    public static void main(String[] args) {
+        
+        Gretting();
+    }
+}
+# acccessing non-static in static by referencing the instance and non-static in non-static
+class Main {
+ void Gretting(){
+    System.out.println( "how are you");
+}
+void bye(){   // non static in nonstatic method needs only object for (bye) because greeting uses object of bye instead creating it own
+    Gretting();
+}
+static void hello(){
+Main s1=new Main(); // accessing non static in static by referencing the instance
+  s1.Gretting();
+}
+    public static void main(String[] args) {
+    Main s1=new Main();    
+    
+    s1.bye();  // object for bye
+    }
+}
+# we cannot use this in static methods
+static  void Gretting(){
+    System.out.println(this.age);
